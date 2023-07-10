@@ -1,0 +1,19 @@
+[package]
+name = "DateSorter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.26"
+filetime = "0.2.21"
+indicatif = "0.17.5"
+walkdir = "2.3.3"
+winapi = { version = "0.3", features = ["fileapi", "handleapi", "minwinbase"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
